@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços</title>
+    <link rel="stylesheet" href="assets/css/servicos.css" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo_psicologia.png" />
+    </head>
+    <body>
+    <header>
+        <nav class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo_psicologia.png" alt="Logo da empresa" />
+            <span>Clínica de Psicologia</span>
+        </div>
+        <ul class="nav-links">
+
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+
+            
+        </ul>
+        <div class="btn">
+            <a href="cadastro.html">
+            <button class="cadastro-btn">Cadastrar</button>
+            </a>
+            <div class="login-area">
+            <button class="entrar-btn" onclick="toggleMenu()">Entrar</button>
+            <div id="menuLogin" class="dropdown">
+                <button onclick="irParaLogin('paciente')">Paciente</button>
+                <button onclick="irParaLogin('colaborador')">Colaborador</button>
+            </div>
+        </div>
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </nav>
+    </header>
+
+    <section class="servicos">
+
+    <h2>Nossos Serviços</h2>
+    <p class="sub">Cuidando da sua saúde mental com profissionalismo e atenção individualizada.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Atendimento Individual</h3>
+            <p>
+                Sessões voltadas para o autoconhecimento e equilíbrio emocional. Trabalhamos questões como ansiedade,
+                estresse, autoestima e desenvolvimento pessoal com abordagens terapêuticas eficazes.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">😌</div>
+            <h3>Terapia para Ansiedade</h3>
+            <p>
+                Foco no controle da ansiedade por meio de técnicas práticas e acompanhamento contínuo.
+                Auxiliamos na identificação de gatilhos e no desenvolvimento de estratégias para uma vida mais leve.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧒🏻</div>
+            <h3>Terapia Infantil</h3>
+            <p>
+                Atendimento especializado para crianças e adolescentes, abordando questões emocionais, comportamentais
+                e de desenvolvimento. Utilizamos técnicas lúdicas para promover o bem-estar e o crescimento saudável.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Atendimento Online</h3>
+            <p>
+                Sessões realizadas de forma remota com a mesma qualidade do atendimento presencial,
+                oferecendo praticidade e conforto para cuidar da sua saúde mental de qualquer lugar.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">❤️</div>
+            <h3>Terapia de Relacionamentos</h3>
+            <p>
+                Ajuda para melhorar comunicação, resolver conflitos e fortalecer vínculos afetivos,
+                promovendo relações mais saudáveis e equilibradas.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌱</div>
+            <h3>Desenvolvimento Pessoal</h3>
+            <p>
+                Processo focado em evolução pessoal, autoconfiança e construção de hábitos positivos,
+                ajudando você a alcançar uma vida mais plena e consciente.
+            </p>
+        </div>
+
+                 <div class="card">
+            <div class="icon">👨‍👩‍👧</div>
+            <h3>Terapia Familiar</h3>
+            <p>
+                Espaço para famílias trabalharem questões de comunicação, dinâmica familiar e resolução de conflitos,
+                promovendo um ambiente mais harmonioso e saudável para todos os membros.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧩</div>
+            <h3>Terapia ABA</h3>
+            <p>
+                Abordagem voltada para crianças com Transtorno do Espectro Autista (TEA), focada em desenvolver habilidades
+                sociais, de comunicação e comportamentais por meio de técnicas baseadas em evidências.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🕊️</div>
+            <h3>Psicoterapia Para Luto</h3>
+            <p>
+                Apoio emocional para lidar com perdas e processos de luto, oferecendo um espaço seguro para expressar sentimentos
+                e encontrar caminhos para a superação e ressignificação da dor.
+            </p>
+        </div>
+        
+
+            <div class="card">
+            <div class="icon">🏳️‍🌈</div>
+            <h3>Terapia LGBTQIA+</h3>
+            <p>
+                Atendimento acolhedor e especializado para pessoas LGBTQIA+, abordando questões de identidade, aceitação
+                e desafios específicos, promovendo um espaço seguro para o autoconhecimento e fortalecimento da autoestima.
+                
+            </p>
+        </div>
+
+
+    </div>
+
+</section>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

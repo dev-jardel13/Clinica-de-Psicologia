@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <img src="assets/images/logo_psicologia.png" alt="Logo" class="logo">
+
+    <h1>Cadastro de Usuário</h1>
+
+    <form action="processar_cadastro.php" method="post">
+
+        <div class="grupo">
+            <h2>Dados Pessoais</h2>
+
+            <label>Nome</label>
+            <input type="text" name="nome" placeholder="Nome completo" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="@example.com" equired>
+
+            <label>Telefone</label>
+            <input type="tel" name="telefone" placeholder="(00) 00000-00000" equired>
+
+            <label>CPF</label>
+            <input type="text" name="cpf"  placeholder="000.000.000-00" required>
+
+            <label>Data de Nascimento</label>
+            <input type="date" name="data_nascimento" required>
+
+            <label>Endereço</label>
+            <input type="text" name="endereco" placeholder="Rua, número, bairro"     required>
+            
+
+            <label>Sexo</label>
+        <div class="sexo-opcoes">
+        <div class="sexo-btn" data-value="masculino">Masculino</div>
+        <div class="sexo-btn" data-value="feminino">Feminino</div>
+        <div class="sexo-btn" data-value="nao_informar">Prefiro não informar</div>
+        </div>
+            <input type="hidden" name="sexo" id="sexoInput" required>
+
+            <label>Tipo de cadastro</label>
+        <div class="tipo-opcoes">
+        <div class="opcoes" data-value="paciente">
+                    <i class="fa-solid fa-user"></i> Paciente
+        </div>
+        <div class="opcoes" data-value="colaborador">
+                    <i class="fa-solid fa-user-doctor"></i> Colaborador
+        </div>
+        </div>
+           
+            <input type="hidden" name="tipo_usuario" id="tipoInput" required>
+        <div class="campo-crp" id="campoCrp" style="display:none">
+             <label>CRP</label>
+            <input type="text" name="crp" placeholder="CRP 00/000000">
+         </div>
+        </div>
+        <br>
+        <div class="grupo">
+             <h2>Segurança</h2>
+
+            <label>Senha</label>
+            <input class="senha" type="password" name="senha" id="senha" placeholder="*********" required>
+
+        <div class="barra">
+        <div id="progresso" class="progresso"></div>
+        </div>
+
+             <p class="forca" id="forca"></p>
+
+            <label>Confirmar Senha</label>
+            <input type="password" name="confirmar_senha" id="confirmarSenha" placeholder="*********" required>
+
+            <p id="mensagemConfirmacao"></p>
+        </div>
+        
+
+        <button type="submit" id="btnCadastrar">Cadastrar</button>
+
+    </form>
+
+        <p class="login-link">
+        Já tem uma conta?
+        <a href="login.html">Entrar</a>
+        </p>
+
+       </div>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/cadastro.js"></script>
+</body>
+</html>

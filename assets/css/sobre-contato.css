@@ -1,0 +1,220 @@
+/* Páginas Sobre e Contato (complementa servicos.css) */
+.pagina-interna {
+    padding: 40px 60px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pagina-interna h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.pagina-interna > .sub {
+    margin-bottom: 36px;
+    color: var(--text);
+    opacity: 0.9;
+    font-size: 17px;
+    max-width: 640px;
+    line-height: 1.5;
+}
+
+.historia {
+    background: var(--navbar);
+    padding: 32px 36px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px var(--shadow);
+    margin-bottom: 48px;
+    border-top: 5px solid var(--primary);
+}
+
+.historia h2 {
+    font-size: 26px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.historia p {
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.historia p:last-child {
+    margin-bottom: 0;
+}
+
+.equipe-titulo {
+    font-size: 32px;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.equipe-sub {
+    margin-bottom: 28px;
+    color: var(--text);
+    opacity: 0.85;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.membro-equipe {
+    background: var(--navbar);
+    padding: 28px 24px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px var(--shadow);
+    text-align: center;
+    transition: 0.3s;
+    border-top: 5px solid var(--primary);
+}
+
+.membro-equipe:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px var(--shadow);
+}
+
+.membro-equipe .avatar {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: rgba(106, 168, 79, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.membro-equipe h3 {
+    color: var(--text);
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.membro-equipe .crp {
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.membro-equipe p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.55;
+    opacity: 0.9;
+}
+
+/* Contato */
+.contato-intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 32px;
+    max-width: 560px;
+}
+
+.contato-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+}
+
+.contato-card {
+    flex: 1 1 240px;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px 26px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 10px 28px var(--shadow);
+    transition: 0.3s;
+}
+
+.contato-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    color: white;
+}
+
+.contato-card .icone {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contato-card.whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.contato-card.instagram {
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+}
+
+.contato-card span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+.contato-card small {
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.dropdown button {
+    font-size: 16px;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.dropdown button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 720px) {
+    .pagina-interna {
+        padding: 32px 20px 60px;
+    }
+
+    .pagina-interna h1 {
+        font-size: 32px;
+    }
+
+    .contato-links {
+        flex-direction: column;
+    }
+
+    .contato-card {
+        max-width: none;
+    }
+}

@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins', sans-serif;
+;
+    
+}
+body {
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 480px;       
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+
+.login-container {
+    flex: 0.8;
+    padding: 50px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+h1{
+    margin-bottom:20px;
+    font-size: 40px;
+    color:rgb(59, 123, 251);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+ 
+h2{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 35px;
+    color: #4CAF50;
+}
+
+
+.logo{
+    width:90px;
+    margin-bottom:20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:35px;
+    outline: none;
+    background: transparent;
+}
+    
+.input-icon {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.input-icon i {
+    color: #4CAF50;
+    margin-right: 5px;
+    font-size: 16px;
+
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#4CAF50;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#43a047;
+}       
+
+p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+a{
+    color:#4CAF50;
+    text-decoration:none;
+    font-weight:bold;
+}
+.divisor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.divisor span {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.divisor p {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+}
+
+.esqueci-senha {
+    display: block;
+   text-align: center;
+   font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    color: #4CAF50;
+
+}
+.esqueci-senha:hover {
+    text-decoration: underline;
+}

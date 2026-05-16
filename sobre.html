@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sobre — Clínica de Psicologia</title>
+        <link rel="stylesheet" href="assets/css/servicos.css" />
+        <link rel="stylesheet" href="assets/css/sobre-contato.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/x-icon" href="assets/images/logo_psicologia.png" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit">
+                        <img src="assets/images/logo_psicologia.png" alt="Logo da empresa" />
+                        <span>Clínica de Psicologia</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <div class="btn">
+                    <a href="cadastro.html">
+                        <button class="cadastro-btn" type="button">Cadastrar</button>
+                    </a>
+                    <div class="login-area">
+                        <button class="entrar-btn" type="button" onclick="toggleMenu()">Entrar</button>
+                        <div id="menuLogin" class="dropdown">
+                            <button type="button" onclick="irParaLogin('paciente')">Paciente</button>
+                            <button type="button" onclick="irParaLogin('colaborador')">Colaborador</button>
+                        </div>
+                    </div>
+                    <button id="theme-toggle" type="button">🌙</button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="pagina-interna">
+            <h1>Sobre nós</h1>
+            <p class="sub">Conheça um pouco da nossa história e das pessoas que cuidam do seu bem-estar.</p>
+
+            <section class="historia" aria-labelledby="titulo-historia">
+                <h2 id="titulo-historia">Como surgiu a clínica</h2>
+                <p>
+                    A Clínica de Psicologia nasceu de um sonho compartilhado: oferecer um lugar acolhedor, sem
+                    julgamentos, onde cada pessoa pudesse ser ouvida de verdade. Tudo começou quando duas psicólogas,
+                    após anos em grandes centros de saúde, perceberam que faltava tempo e proximidade no cuidado com
+                    quem buscava ajuda.
+                </p>
+                <p>
+                    Em 2018, reunimos uma pequena equipe e abrimos as portas do nosso primeiro consultório com uma
+                    proposta simples: escuta atenta, ética profissional e tratamentos baseados em evidências. Com o
+                    tempo, a comunidade nos acolheu, indicou amigos e familiares, e fomos crescendo — sempre mantendo
+                    o mesmo propósito de tratar cada história com respeito e dedicação.
+                </p>
+                <p>
+                    Hoje continuamos sendo uma clínica humana, próxima das pessoas e comprometida com a saúde mental em
+                    todas as fases da vida.
+                </p>
+            </section>
+
+            <h2 class="equipe-titulo" id="titulo-equipe">Nossa equipe de psicólogos</h2>
+            <p class="equipe-sub">Profissionais com formação contínua e diferentes especialidades para atender você.</p>
+
+            <div class="equipe-grid">
+                <article class="membro-equipe">
+                    <div class="avatar" aria-hidden="true">🌿</div>
+                    <h3>Dra. Marina Alves</h3>
+                    <p class="crp">CRP 06/123456</p>
+                    <p>Psicóloga clínica, atua com ansiedade, estresse e desenvolvimento pessoal. Abordagem TCC.</p>
+                </article>
+                <article class="membro-equipe">
+                    <div class="avatar" aria-hidden="true">🌸</div>
+                    <h3>Dr. Ricardo Mendes</h3>
+                    <p class="crp">CRP 06/234567</p>
+                    <p>Especialista em terapia familiar e de casal. Foco em comunicação e mediação de conflitos.</p>
+                </article>
+                <article class="membro-equipe">
+                    <div class="avatar" aria-hidden="true">☀️</div>
+                    <h3>Dra. Fernanda Costa</h3>
+                    <p class="crp">CRP 06/345678</p>
+                    <p>Psicologia infantojuvenil e orientação a pais. Atenção a TDAH, TEA e demandas escolares.</p>
+                </article>
+                <article class="membro-equipe">
+                    <div class="avatar" aria-hidden="true">💜</div>
+                    <h3>Dr. Lucas Oliveira</h3>
+                    <p class="crp">CRP 06/456789</p>
+                    <p>Atendimento a luto, depressão e questões LGBTQIA+, com perspectiva afirmativa e acolhedora.</p>
+                </article>
+            </div>
+        </main>
+
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

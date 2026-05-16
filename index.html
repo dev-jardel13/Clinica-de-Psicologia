@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="assets/css/inicio.css" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo_psicologia.png" />
+    </head>
+    <body>
+    <header>
+        <nav class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo_psicologia.png" alt="Logo da empresa" />
+            <span>Clínica de Psicologia</span>
+        </div>
+        <ul class="nav-links">
+
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+
+            
+        </ul>
+        <div class="btn">
+            <a href="cadastro.html">
+            <button class="cadastro-btn">Cadastrar</button>
+            </a>
+            <div class="login-area">
+            <button class="entrar-btn" onclick="toggleMenu()">Entrar</button>
+            <div id="menuLogin" class="dropdown">
+                <button onclick="irParaLogin('paciente')">Paciente</button>
+                <button onclick="irParaLogin('colaborador')">Colaborador</button>
+            </div>
+        </div>
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </nav>
+    </header>
+    <!-- HERO (faz o fundo aparecer) -->
+    <section class="hero">
+        <div class="hero-container">
+        <!-- LADO ESQUERDO -->
+        <div class="hero-left">
+        <div class="hero-title">
+            <img src="assets/images/psicologia.png" class="hero-logo" />
+            <h1>Cuidando da sua saúde mental</h1>
+        </div>
+        <p>Terapia e acolhimento para uma vida mais equilibrada</p>
+        </div>
+        <!-- LADO DIREITO -->
+        <div class="hero-right">
+        <img
+            src="assets/images/Sessão de terapia no consultório.png"
+            alt="Sessão de terapia"/>
+        </div>
+        </div>
+    </section>
+    <div class="cards">
+        <!-- CARD 1 -->
+        <div class="card">
+        <img src="assets/images/Calendário.png" alt="Agendar" />
+        <h3>Agende sua consulta</h3>
+        <p>Marque uma sessão com nossos psicólogos especializados.</p>
+        <a href="#" onclick="verificarLogin()">Agendar consulta</a>
+        </div>
+        <!-- CARD 2 (ESPECIALIDADES) -->
+        <div class="card especialidades">
+        <img src="assets/images/especialidade.png" alt="Especialidades" />
+        <h3>Especialidades</h3>
+        <p>Descubra qual atendimento é ideal para você.</p>
+        <a href="servicos.html">Ver serviços</a>
+        </div>
+        <!-- CARD 3 -->
+    <div class="card sobre">
+        <img src="assets/images/sobre-icone.png" alt="Sobre" />
+        <h3>Conheça nossa clínica</h3>
+        <p>Saiba mais sobre nossa história e equipe.</p>
+        <a href="sobre.html">Conhecer equipe</a>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
