@@ -13,37 +13,171 @@
     <link rel="icon" type="image/x-icon" href="assets/images/logo_psicologia.png" />
     </head>
     <body>
+      <!-- HEADER -->
     <header>
+
         <nav class="navbar">
-        <div class="logo">
-            <img src="assets/images/logo_psicologia.png" alt="Logo da empresa" />
-            <span>Clínica de Psicologia</span>
-        </div>
-        <ul class="nav-links">
 
-            <li><a href="index.html">Início</a></li>
-            <li><a href="servicos.html">Serviços</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <!-- LOGO -->
+            <div class="logo">
 
-            
-        </ul>
-        <div class="btn">
-            <a href="cadastro.html">
-            <button class="cadastro-btn">Cadastrar</button>
-            </a>
-            <div class="login-area">
-            <button class="entrar-btn" onclick="toggleMenu()">Entrar</button>
-            <div id="menuLogin" class="dropdown">
-                <button onclick="irParaLogin('paciente')">Paciente</button>
-                <button onclick="irParaLogin('colaborador')">Colaborador</button>
+                <img
+                    src="assets/images/logo_psicologia.png"
+                    alt="Logo da empresa"
+                />
+
+                <span>
+                    Clínica de Psicologia
+                </span>
+
             </div>
-        </div>
-            <button id="theme-toggle">🌙</button>
-        </div>
-    </nav>
-    </header>
 
+            <!-- LINKS -->
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li id="agendamentoLink" style="display:none;">
+
+                <a href="agendamento.html">
+                        Agendamento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="servicos.html">
+                        Serviços
+                    </a>
+                </li>
+
+                <li>
+                    <a href="sobre.html">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contato.html">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- BOTÕES -->
+            <div class="btn">
+
+                <!-- VISITANTE -->
+                <div id="guestButtons">
+
+                    <!-- CADASTRO -->
+                    <a href="cadastro.html">
+
+                        <button class="cadastro-btn">
+                            Cadastrar
+                        </button>
+
+                    </a>
+
+                    <!-- LOGIN -->
+                    <div class="login-area">
+
+                        <button
+                            class="entrar-btn"
+                            onclick="toggleMenu()"
+                        >
+                            Entrar
+                        </button>
+
+                        <!-- DROPDOWN LOGIN -->
+                        <div
+                            id="menuLogin"
+                            class="dropdown"
+                        >
+
+                            <button
+                                onclick="irParaLogin('paciente')"
+                            >
+                                Paciente
+                            </button>
+
+                            <button
+                                onclick="irParaLogin('colaborador')"
+                            >
+                                Colaborador
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- PERFIL -->
+                <div
+                    class="profile-menu"
+                    id="profileMenu"
+                >
+
+                    <!-- BOTÃO PERFIL -->
+                    <button
+                        class="profile-btn"
+                        id="profileBtn"
+
+                    >
+
+                        <img
+                            src="assets/images/user.png"
+                            alt="Perfil"
+                        />
+
+                    </button>
+
+                    <!-- DROPDOWN PERFIL -->
+                    <div
+                        class="profile-dropdown"
+                        id="profileDropdown"
+                    >
+
+                        <!-- NOME -->
+                        <p id="userName">
+                            Usuário
+                        </p>
+
+                        <!-- LINKS -->
+                        <a href="perfil.html">
+                            Meu Perfil
+                        </a>
+
+                        <a href="#">
+                            Configurações
+                        </a>
+
+                        <!-- TEMA -->
+                        <button
+                            id="themeToggleDropdown"
+                        >
+                            🌙 Tema escuro
+                        </button>
+
+                        <!-- SAIR -->
+                        <button id="logoutBtn">
+                            Sair
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
     <section class="servicos">
 
     <h2>Nossos Serviços</h2>

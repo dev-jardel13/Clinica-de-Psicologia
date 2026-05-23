@@ -1,19 +1,34 @@
 <!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sobre — Clínica de Psicologia</title>
-        <link rel="stylesheet" href="assets/css/servicos.css" />
-        <link rel="stylesheet" href="assets/css/sobre-contato.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="icon" type="image/x-icon" href="assets/images/logo_psicologia.png" />
-    </head>
-    <body>
-        <!-- HEADER -->
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Editar Perfil</title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="assets/css/perfil.css"
+    >
+
+    <!-- FONTE -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+     <!-- HEADER -->
+    <!-- HEADER -->
     <header>
 
         <nav class="navbar">
@@ -179,61 +194,116 @@
 
     </header>
 
-        <main class="pagina-interna">
-            <h1>Sobre nós</h1>
-            <p class="sub">Conheça um pouco da nossa história e das pessoas que cuidam do seu bem-estar.</p>
+    <!-- CONTAINER -->
+    <main class="perfil-container">
 
-            <section class="historia" aria-labelledby="titulo-historia">
-                <h2 id="titulo-historia">Como surgiu a clínica</h2>
-                <p>
-                    A Clínica de Psicologia nasceu de um sonho compartilhado: oferecer um lugar acolhedor, sem
-                    julgamentos, onde cada pessoa pudesse ser ouvida de verdade. Tudo começou quando duas psicólogas,
-                    após anos em grandes centros de saúde, perceberam que faltava tempo e proximidade no cuidado com
-                    quem buscava ajuda.
-                </p>
-                <p>
-                    Em 2018, reunimos uma pequena equipe e abrimos as portas do nosso primeiro consultório com uma
-                    proposta simples: escuta atenta, ética profissional e tratamentos baseados em evidências. Com o
-                    tempo, a comunidade nos acolheu, indicou amigos e familiares, e fomos crescendo — sempre mantendo
-                    o mesmo propósito de tratar cada história com respeito e dedicação.
-                </p>
-                <p>
-                    Hoje continuamos sendo uma clínica humana, próxima das pessoas e comprometida com a saúde mental em
-                    todas as fases da vida.
-                </p>
-            </section>
+        <!-- CARD -->
+        <div class="perfil-card">
 
-            <h2 class="equipe-titulo" id="titulo-equipe">Nossa equipe de psicólogos</h2>
-            <p class="equipe-sub">Profissionais com formação contínua e diferentes especialidades para atender você.</p>
+            <!-- TÍTULO -->
+            <h1>
+                Editar Perfil
+            </h1>
 
-            <div class="equipe-grid">
-                <article class="membro-equipe">
-                    <div class="avatar" aria-hidden="true">🌿</div>
-                    <h3>Dra. Marina Alves</h3>
-                    <p class="crp">CRP 06/123456</p>
-                    <p>Psicóloga clínica, atua com ansiedade, estresse e desenvolvimento pessoal. Abordagem TCC.</p>
-                </article>
-                <article class="membro-equipe">
-                    <div class="avatar" aria-hidden="true">🌸</div>
-                    <h3>Dr. Ricardo Mendes</h3>
-                    <p class="crp">CRP 06/234567</p>
-                    <p>Especialista em terapia familiar e de casal. Foco em comunicação e mediação de conflitos.</p>
-                </article>
-                <article class="membro-equipe">
-                    <div class="avatar" aria-hidden="true">☀️</div>
-                    <h3>Dra. Fernanda Costa</h3>
-                    <p class="crp">CRP 06/345678</p>
-                    <p>Psicologia infantojuvenil e orientação a pais. Atenção a TDAH, TEA e demandas escolares.</p>
-                </article>
-                <article class="membro-equipe">
-                    <div class="avatar" aria-hidden="true">💜</div>
-                    <h3>Dr. Lucas Oliveira</h3>
-                    <p class="crp">CRP 06/456789</p>
-                    <p>Atendimento a luto, depressão e questões LGBTQIA+, com perspectiva afirmativa e acolhedora.</p>
-                </article>
-            </div>
-        </main>
+            <p>
+                Atualize suas informações
+            </p>
 
-        <script src="assets/js/script.js"></script>
-    </body>
+            <!-- FORM -->
+            <form id="formPerfil">
+
+                <!-- NOME -->
+                <div class="input-group">
+
+                    <label for="nome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Seu nome"
+                    >
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="input-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Seu email"
+                    >
+
+                </div>
+
+                <!-- TELEFONE -->
+                <div class="input-group">
+
+                    <label for="telefone">
+                        Telefone
+                    </label>
+
+                    <input
+                        type="text"
+                        id="telefone"
+                        placeholder="Seu telefone"
+                    >
+
+                </div>
+
+                <!-- ENDEREÇO -->
+                <div class="input-group">
+
+                    <label for="endereco">
+                        Endereço
+                    </label>
+
+                    <input
+                        type="text"
+                        id="endereco"
+                        placeholder="Seu endereço"
+                    >
+
+                </div>
+
+                <!-- SENHA -->
+                <div class="input-group">
+
+                    <label for="senha">
+                        Nova senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Nova senha"
+                    >
+
+                </div>
+
+                <!-- BOTÃO -->
+                <button
+                    type="submit"
+                    class="salvar-btn"
+                >
+                    Salvar alterações
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- SCRIPT -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
 </html>

@@ -513,8 +513,25 @@ if (formLogin) {
                     "Login realizado com sucesso!"
                 );
 
-                window.location.href =
-                    "index.html";
+                // =======================
+                // 📌 CORREÇÃO DA INTENÇÃO
+                // =======================
+
+                const acao =
+                    localStorage.getItem("acaoPosLogin");
+
+                if (acao === "agendamento") {
+
+                    localStorage.removeItem("acaoPosLogin");
+
+                    window.location.href =
+                        "agendamento.html";
+
+                } else {
+
+                    window.location.href =
+                        "index.html";
+                }
 
             } else {
 
@@ -528,3 +545,457 @@ if (formLogin) {
     );
 
 }
+
+// =======================
+// 👤 PERFIL NAVBAR
+// =======================
+
+// BOTÕES VISITANTE
+const guestButtons =
+    document.getElementById(
+        "guestButtons"
+    );
+
+// MENU PERFIL
+const profileMenu =
+    document.getElementById(
+        "profileMenu"
+    );
+
+// BOTÃO PERFIL
+const profileBtn =
+    document.getElementById(
+        "profileBtn"
+    );
+
+// DROPDOWN PERFIL
+const profileDropdown =
+    document.getElementById(
+        "profileDropdown"
+    );
+
+// NOME USUÁRIO
+const userName =
+    document.getElementById(
+        "userName"
+    );
+
+// BOTÃO SAIR
+const logoutBtn =
+    document.getElementById(
+        "logoutBtn"
+    );
+
+// BOTÃO TEMA
+const themeButton =
+    document.getElementById(
+        "themeToggleDropdown"
+    );
+
+// =======================
+// PEGAR USUÁRIO
+// =======================
+
+const usuarioSalvo =
+    JSON.parse(
+        localStorage.getItem(
+            "usuarioLogado"
+        )
+    );
+
+// =======================
+// VERIFICAR LOGIN
+// =======================
+
+if (
+    usuarioSalvo &&
+    guestButtons &&
+    profileMenu
+) {
+
+    // esconder login/cadastro
+    guestButtons.style.display =
+        "none";
+
+    // mostrar perfil
+    profileMenu.style.display =
+        "block";
+
+    // colocar nome usuário
+    if (userName) {
+
+        userName.textContent =
+            usuarioSalvo.nome;
+
+    }
+
+}
+
+else {
+
+    // mostrar botões normais
+    if (guestButtons) {
+
+        guestButtons.style.display =
+            "flex";
+
+    }
+
+}
+
+// =======================
+// ABRIR DROPDOWN
+// =======================
+
+if (
+    profileBtn &&
+    profileDropdown
+) {
+
+    profileBtn.addEventListener(
+        "click",
+        (e) => {
+
+            e.stopPropagation();
+
+            profileDropdown.classList.toggle(
+                "active"
+            );
+
+        }
+    );
+
+}
+
+// =======================
+// FECHAR AO CLICAR FORA
+// =======================
+
+window.addEventListener(
+    "click",
+    (e) => {
+
+        if (
+            profileMenu &&
+            !profileMenu.contains(e.target)
+        ) {
+
+            profileDropdown.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
+
+// =======================
+// LOGOUT
+// =======================
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener(
+        "click",
+        () => {
+
+            // remover login
+            localStorage.removeItem(
+                "logado"
+            );
+
+            localStorage.removeItem(
+                "usuarioLogado"
+            );
+
+            // voltar início
+            window.location.href =
+                "index.html";
+
+        }
+    );
+
+}
+
+// =======================
+// 🌙 TEMA
+// =======================
+
+// tema salvo
+if (
+    localStorage.getItem("theme")
+    === "dark"
+) {
+
+    document.body.classList.add(
+        "dark"
+    );
+
+    if (themeButton) {
+
+        themeButton.innerHTML =
+            "☀️ Tema claro";
+
+    }
+
+}
+
+else {
+
+    if (themeButton) {
+
+        themeButton.innerHTML =
+            "🌙 Tema escuro";
+
+    }
+
+}
+
+// trocar tema
+if (themeButton) {
+
+    themeButton.addEventListener(
+        "click",
+        () => {
+
+            document.body.classList.toggle(
+                "dark"
+            );
+
+            // DARK
+            if (
+                document.body.classList.contains(
+                    "dark"
+                )
+            ) {
+
+                localStorage.setItem(
+                    "theme",
+                    "dark"
+                );
+
+                themeButton.innerHTML =
+                    "☀️ Tema claro";
+
+            }
+
+            // LIGHT
+            else {
+
+                localStorage.setItem(
+                    "theme",
+                    "light"
+                );
+
+                themeButton.innerHTML =
+                    "🌙 Tema escuro";
+
+            }
+
+        }
+    );
+
+}
+
+// =======================
+// 👤 PERFIL - EDITAR DADOS
+// =======================
+
+const formPerfil =
+    document.getElementById("formPerfil");
+
+if (formPerfil) {
+
+    let usuario =
+        JSON.parse(
+            localStorage.getItem("usuarioLogado")
+        );
+
+    // se não estiver logado, volta pro login
+    if (!usuario) {
+
+        window.location.href = "login.html";
+
+    } else {
+
+        // preencher campos automaticamente
+        document.getElementById("nome").value =
+            usuario.nome || "";
+
+        document.getElementById("email").value =
+            usuario.email || "";
+
+        document.getElementById("telefone").value =
+            usuario.telefone || "";
+
+        document.getElementById("endereco").value =
+            usuario.endereco || "";
+
+    }
+
+    // salvar alterações
+    formPerfil.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        let usuarios =
+            JSON.parse(
+                localStorage.getItem("usuarios")
+            ) || [];
+
+        // atualizar dados
+        usuario.nome =
+            document.getElementById("nome").value;
+
+        usuario.email =
+            document.getElementById("email").value;
+
+        usuario.telefone =
+            document.getElementById("telefone").value;
+
+        usuario.endereco =
+            document.getElementById("endereco").value;
+
+        const novaSenha =
+            document.getElementById("senha").value;
+
+        if (novaSenha) {
+            usuario.senha = novaSenha;
+        }
+
+        // atualizar lista de usuários
+        const index =
+            usuarios.findIndex(
+                u => u.email === usuario.email
+            );
+
+        if (index !== -1) {
+            usuarios[index] = usuario;
+        }
+
+        // salvar no localStorage
+        localStorage.setItem(
+            "usuarios",
+            JSON.stringify(usuarios)
+        );
+
+        localStorage.setItem(
+            "usuarioLogado",
+            JSON.stringify(usuario)
+        );
+
+        alert("Perfil atualizado com sucesso!");
+
+        window.location.href = "index.html";
+
+    });
+
+}
+
+function atualizarNavbar() {
+
+    const agendamentoLink =
+        document.getElementById("agendamentoLink");
+
+    const usuario =
+        localStorage.getItem("usuarioLogado");
+
+    if (usuario) {
+
+        agendamentoLink.style.display = "block";
+
+    } else {
+
+        agendamentoLink.style.display = "none";
+
+    }
+}
+
+const btnAgendar =
+    document.getElementById("btnAgendar");
+
+if (btnAgendar) {
+
+    btnAgendar.addEventListener("click", (e) => {
+
+        const logado =
+            localStorage.getItem("logado");
+
+        // se NÃO estiver logado
+        if (logado !== "true") {
+
+            e.preventDefault();
+
+            // guarda intenção
+            localStorage.setItem(
+                "acaoPosLogin",
+                "agendamento"
+            );
+
+            // vai para login
+            window.location.href =
+                "login.html";
+        }
+
+    });
+
+}
+
+// =======================
+// 📅 CARD AGENDAMENTO INTELIGENTE
+// =======================
+
+function irParaAgendamento(e) {
+
+    e.preventDefault();
+
+    const logado =
+        localStorage.getItem("logado");
+
+    if (logado === "true") {
+
+        window.location.href =
+            "agendamento.html";
+
+    } else {
+
+        // guarda intenção antes do login
+        localStorage.setItem(
+            "acaoPosLogin",
+            "agendamento"
+        );
+
+        window.location.href =
+            "login.html";
+    }
+
+}
+
+// =======================
+// 🔄 ATUALIZAR NAVBAR AO CARREGAR
+// =======================
+
+function atualizarNavbarAgendamento() {
+
+    const agendamentoLink =
+        document.getElementById("agendamentoLink");
+
+    const logado =
+        localStorage.getItem("logado");
+
+    if (agendamentoLink) {
+
+        if (logado === "true") {
+            agendamentoLink.style.display = "block";
+        } else {
+            agendamentoLink.style.display = "none";
+        }
+
+    }
+
+}
+
+// rodar automaticamente quando abrir qualquer página
+document.addEventListener("DOMContentLoaded", () => {
+    atualizarNavbarAgendamento();
+});

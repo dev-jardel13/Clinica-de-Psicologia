@@ -345,3 +345,149 @@ body.dark {
 .card.sobre img {
     width: 110px;
 }
+
+/* =========================================
+   BOTÕES VISITANTE
+========================================= */
+
+#guestButtons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =========================================
+   PERFIL
+========================================= */
+
+.profile-menu {
+    position: relative;
+    display: none;
+}
+
+/* BOTÃO PERFIL */
+
+.profile-btn {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    border: none;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    transform: scale(1.05);
+}
+
+/* FOTO PERFIL */
+
+.profile-btn img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* =========================================
+   DROPDOWN PERFIL
+========================================= */
+
+.profile-dropdown {
+
+    position: absolute;
+
+    top: 70px;
+    right: 0;
+
+    width: 230px;
+
+    background: var(--navbar);
+
+    border-radius: 16px;
+
+    padding: 15px;
+
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    z-index: 9999;
+}
+
+/* ABRIR DROPDOWN */
+
+.profile-dropdown.active {
+    display: flex;
+}
+
+/* NOME */
+
+.profile-dropdown p {
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: var(--text);
+
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    padding-bottom: 10px;
+}
+
+/* LINKS E BOTÕES */
+
+.profile-dropdown a,
+.profile-dropdown button {
+
+    background: transparent;
+    border: none;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    padding: 8px 0;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+
+    color: var(--primary);
+
+    transform: translateX(5px);
+}
+
+/* DARK MODE */
+
+body.dark .profile-dropdown p {
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+
+}
