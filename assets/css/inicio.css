@@ -25,6 +25,7 @@ body {
 }
 
 /* NAVBAR */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -42,6 +43,7 @@ body {
 
     width: 100%;
     box-sizing: border-box; 
+    z-index: 10000; /* BUG CORRIGIDO NAO MEXA POR FAVOR,REBECA E ERICK ,CHOREI MUITO  PARA CORRIGIR: ASSINADO JARDEL E PEDRO */ 
 }
 
 .navbar-container {
